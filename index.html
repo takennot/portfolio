@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ruslan Musaev - Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://{{cdn}}/prismjs@v1.x/themes/prism.css" rel="stylesheet" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/me.jpg" alt="My photo" width="108px" height="133px" /></span>
+						<h1>Ruslan Musaev</h1>
+						<p>Game Programmer/Developer<br />
+						C# | C++ | Java</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">About me</a></li>
+							<li><a href="#first">Projects</a></li>
+							<li><a href="#footer">Contact me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Ruslan Musaev</h2>
+										</header>
+										<p>Currently student at Stockholm University, studying in the Game Development program. I have experience with C#, Java and C++. In my free time I usually learn C# & C++ and write small side-projects.</p>
+										<ul class="actions">
+											<li><a href="https://github.com/takennot" class="button" target="_blank">Github</a></li>
+										</ul>
+									</div>
+									<span class="image"><img src="images/me.jpg" alt="My photo" /></span>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>HLTV Rating 2.0 Calculator (C#)</h2>
+								</header>
+								<p>Simple calculator with manual input that calculates player's HLTV Rating 2.0 using formula from <a href="https://flashed.gg/posts/reverse-engineering-hltv-rating/" target="_blank">this article</a>.</p>
+								<img src="https://raw.githubusercontent.com/takennot/hltv2calc/master/scr.png" alt="hltv2calc" width="50%" height="50%">
+								<p>Considering how simple this program is, around 95% of the program is contained in these 2 methods below. (Warning: the following code has been written when I just started learning programming and does not reflect my actual skills. I am planning to re-write the project in distant future) </p>
+								<pre class="line-numbers">
+									<code class="language-csharp line-numbers">
+"public void var_calc_Click(object sender, EventArgs e){
+scoreCT = int.Parse(score1.Text);
+scoreT = int.Parse(score2.Text);
+rounds = scoreT + scoreCT;
+kills = int.Parse(kills_tbx.Text);
+deaths = int.Parse(death_tbx.Text);
+assist = int.Parse(ass_tbx.Text);
+APR_int = (double)assist / rounds;
+KPR_int = (double)kills / rounds;
+KPR.Text = KPR_int.ToString();
+DPR_int = (double)deaths / rounds;
+DPR.Text = DPR_int.ToString();
+double impvar1 = 2.13 * KPR_int;
+double impvar2 = 0.42 * APR_int;
+Impact_int = impvar1 + impvar2 - 0.41;
+Impact.Text = Impact_int.ToString();}
+
+public void rating_calculate_Click(object sender, EventArgs e){
+KAST_int = double.Parse(KAST.Text);
+ADR_int = double.Parse(ADR.Text);
+double resvar1 = 0.0073 * KAST_int;
+double resvar2 = 0.3591 * KPR_int;
+double resvar3 = 0.5329 * (-1) * DPR_int;
+double resvar4 = 0.2372 * Impact_int;
+double resvar5 = 0.0032 * ADR_int;
+result = resvar1 + resvar2 + resvar3 + resvar4 + resvar5 + 0.1587;
+rating.Text = Math.Round((double)result, 2).ToString();}"
+									</code>
+								</pre>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="https://github.com/takennot/hltv2calc" class="button" target="_blank">Github</a></li>
+									</ul>
+								</footer>
+							</section>
+
+						<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>TicTacToe (Unity | C#)</h2>
+									<p>Small school project where we made TicTacToe in Unity. <br><a href="https://takennot.github.io/tictactoe/" target="_blank">Play here </a></p>
+									<img src="https://i.imgur.com/0K3ueGn.png" width="75%" height="75%">
+								</header>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="https://github.com/takennot/tictactoe-src" class="button" target="_blank">Github</a></li>
+									</ul>
+								</footer>
+							</section>
+
+						<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>JavaFX Map (Java)</h2>
+									<p>PROG2 Project</p>
+								</header>
+								<img src="https://raw.githubusercontent.com/takennot/prog2-graphical/main/capture.png" width="45%" height="45%">
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="https://github.com/takennot/prog2-graphical" class="button" target="_blank">Github</a></li>
+									</ul>
+								</footer>
+							</section>
+
+						<!-- Rotating Cube -->
+							<section id="cube" class="main special">
+								<header class="major">
+									<h2>Rotating cube in console (C)</h2>
+									<p>Small side project in C</p>
+								</header>
+								<img src="images/hehe.gif" width="45%" height="45%">
+								<p>Code snippet: </p>
+								<pre>
+									<code>
+void calculateForSurface(float cubeX, float cubeY, float cubeZ, int ch) {
+  x = calculateX(cubeX, cubeY, cubeZ);
+  y = calculateY(cubeX, cubeY, cubeZ);
+  z = calculateZ(cubeX, cubeY, cubeZ) + distanceFromCam;
+  ooz = 1 / z;
+  xp = (int)(width / 2 + horizontalOffset + K1 * ooz * x * 2);
+  yp = (int)(height / 2 + K1 * ooz * y);
+  idx = xp + yp * width;
+  if (idx >= 0 && idx < width * height) {
+    if (ooz > zBuffer[idx]) {
+      zBuffer[idx] = ooz;
+      buffer[idx] = ch;
+    }
+  }
+}
+									</code>
+								</pre>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="https://github.com/takennot/practice/blob/main/cube.c" class="button" target="_blank">Github</a></li>
+									</ul>
+								</footer>
+							</section>
+
+						<!-- Rotating Cube -->
+							<section id="tower" class="main special">
+								<header class="major">
+									<h2>Luna's Tower (Unity | C#)</h2>
+									<p>MAPP Group project. <br>
+										Princess Luna is kidnapped by the Moon emperor and has been taken prisoner on the moon. You, a brave mage, is taking it upon yourself to save her. Use your magic to build a tower using blocks from the surrounding terrain as high as you can. Build it higher, and higher and higher! All the way To the moon! <br>
+										<ul>
+											<li>Can you build a tower high enough?</li>
+											<li>Can you reach the moon?</li>
+											<li>Can you save the princess?</li>
+										</ul>
+										<br>This is the story of Luna’s tower!</p>
+								</header>
+								<iframe src="https://drive.google.com/file/d/12bB7UHJG29UGwpK7wC1sM9x55NAwxYmm/preview" width="640" height="480" allow="autoplay"></iframe>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="https://github.com/SagaLD/Lunas-Tower" class="button" target="_blank">Github</a></li>
+									</ul>
+								</footer>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Contact me</h2>
+							<dl class="alt">
+								<dt>GitHub</dt>
+								<dd>takennot</dd>
+								<dt>Email</dt>
+								<dd><a href="mailto:rumu4402@dsv.su.se">rumu4402@dsv.su.se</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="https://github.com/takennot" class="icon brands fa-github alt" target="_blank"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/ruslan-musaev-26772a1ab/" class="icon brands fa-linkedin alt" target="_blank"><span class="label">LinkedIn</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Ruslan Musaev. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://{{cdn}}/prismjs@v1.x/components/prism-core.min.js"></script>
+			<script src="https://{{cdn}}/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+
+	</body>
+</html>
