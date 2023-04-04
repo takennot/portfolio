@@ -24,6 +24,13 @@
 						<h1>Ruslan Musaev</h1>
 						<p>Game Programmer/Developer<br />
 						C# | C++ | Java</p>
+						<section>
+							<ul class="icons">
+								<li><a href="https://github.com/takennot" class="icon brands fa-github alt" target="_blank"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/ruslan-musaev-26772a1ab/" class="icon brands fa-linkedin alt" target="_blank"><span class="label">LinkedIn</span></a></li>
+								<li><a href="mailto:rumu4402@dsv.su.se" class="icon fa-envelope alt" target="_blank"><span class="label">Email</span></a></li>
+							</ul>
+						</section>
 					</header>
 
 				<!-- Nav -->
@@ -62,37 +69,7 @@
 								<p>Simple calculator with manual input that calculates player's HLTV Rating 2.0 using formula from <a href="https://flashed.gg/posts/reverse-engineering-hltv-rating/" target="_blank">this article</a>.</p>
 								<img src="https://raw.githubusercontent.com/takennot/hltv2calc/master/scr.png" alt="hltv2calc" width="50%" height="50%">
 								<p>Considering how simple this program is, around 95% of the program is contained in these 2 methods below. (Warning: the following code has been written when I just started learning programming and does not reflect my actual skills. I am planning to re-write the project in distant future) </p>
-								<pre class="line-numbers">
-									<code class="language-csharp line-numbers">
-"public void var_calc_Click(object sender, EventArgs e){
-scoreCT = int.Parse(score1.Text);
-scoreT = int.Parse(score2.Text);
-rounds = scoreT + scoreCT;
-kills = int.Parse(kills_tbx.Text);
-deaths = int.Parse(death_tbx.Text);
-assist = int.Parse(ass_tbx.Text);
-APR_int = (double)assist / rounds;
-KPR_int = (double)kills / rounds;
-KPR.Text = KPR_int.ToString();
-DPR_int = (double)deaths / rounds;
-DPR.Text = DPR_int.ToString();
-double impvar1 = 2.13 * KPR_int;
-double impvar2 = 0.42 * APR_int;
-Impact_int = impvar1 + impvar2 - 0.41;
-Impact.Text = Impact_int.ToString();}
-
-public void rating_calculate_Click(object sender, EventArgs e){
-KAST_int = double.Parse(KAST.Text);
-ADR_int = double.Parse(ADR.Text);
-double resvar1 = 0.0073 * KAST_int;
-double resvar2 = 0.3591 * KPR_int;
-double resvar3 = 0.5329 * (-1) * DPR_int;
-double resvar4 = 0.2372 * Impact_int;
-double resvar5 = 0.0032 * ADR_int;
-result = resvar1 + resvar2 + resvar3 + resvar4 + resvar5 + 0.1587;
-rating.Text = Math.Round((double)result, 2).ToString();}"
-									</code>
-								</pre>
+								<img src="https://i.imgur.com/V5KvAlG.png" width="75%" height="75%">
 								<footer class="major">
 									<ul class="actions special">
 										<li><a href="https://github.com/takennot/hltv2calc" class="button" target="_blank">Github</a></li>
@@ -136,25 +113,7 @@ rating.Text = Math.Round((double)result, 2).ToString();}"
 								</header>
 								<img src="images/hehe.gif" width="45%" height="45%">
 								<p>Code snippet: </p>
-								<pre>
-									<code>
-void calculateForSurface(float cubeX, float cubeY, float cubeZ, int ch) {
-  x = calculateX(cubeX, cubeY, cubeZ);
-  y = calculateY(cubeX, cubeY, cubeZ);
-  z = calculateZ(cubeX, cubeY, cubeZ) + distanceFromCam;
-  ooz = 1 / z;
-  xp = (int)(width / 2 + horizontalOffset + K1 * ooz * x * 2);
-  yp = (int)(height / 2 + K1 * ooz * y);
-  idx = xp + yp * width;
-  if (idx >= 0 && idx < width * height) {
-    if (ooz > zBuffer[idx]) {
-      zBuffer[idx] = ooz;
-      buffer[idx] = ch;
-    }
-  }
-}
-									</code>
-								</pre>
+								<img src="https://i.imgur.com/x3GWyXF.png" width="75%" height="75%">
 								<footer class="major">
 									<ul class="actions special">
 										<li><a href="https://github.com/takennot/practice/blob/main/cube.c" class="button" target="_blank">Github</a></li>
